@@ -1,0 +1,577 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "rubik";
+}
+/*MOBILE*/
+/*Nav Start*/
+button + .menu {
+	display: none;
+	opacity: 1;
+	visibility: hidden;
+}
+
+button.menu-open + .menu {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+#menu-button {
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 35px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-right: 40px;
+	z-index: 3;
+}
+
+button span {
+	width: 45px;
+	background-color: black;
+	display: block;
+	height: 6px;
+	margin-bottom: 6px;
+	border-radius: 6px;
+	position: relative;
+	right: 0;
+	transition: all 0.3 ease-in-out;
+}
+
+button:hover span:nth-child(2) {
+	background-color: white;
+	left: 1px;
+}
+
+button .moving-menu {
+	right: 5px;
+	transition: 1s ease-in-out;
+}
+
+.menu {
+	min-width: 100%;
+	min-height: 200%;
+	background-color: rgba(255, 255, 255, 0.7);
+	position: fixed;
+	z-index: 2;
+}
+
+.menu ul {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 75px;
+	align-items: center;
+	text-align: center;
+	list-style: none;
+	padding-bottom: 100px;
+}
+
+.menu a {
+	font-size: 2.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu a:any-link {
+	color: black;
+}
+
+.menu a:hover {
+	text-decoration-line: underline;
+	text-decoration-color: #d200a2;
+	text-decoration-thickness: 7px;
+	border-radius: 5px;
+	transition: 0.5s ease-in-out;
+}
+
+/*End Nav*/
+
+/* Start Homepage*/
+.homepage {
+	min-height: 100vh;
+	background-image: url(/img/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+	background-size: cover;
+	background-position: 50% 45%;
+}
+
+.moonbox {
+	border: 4px solid black;
+	width: 10rem;
+	position: absolute;
+	padding: 5px;
+	left: 7%;
+	top: 11%;
+	font-family: "rubik";
+	background-color: rgba(255, 255, 255, 0.7);
+	font-weight: 700;
+}
+
+.h1box {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.story {
+	font-weight: 300;
+	font-size: 10px;
+	letter-spacing: 0.5px;
+}
+
+.story a {
+	text-decoration: none;
+	transition-delay: 1s;
+}
+
+.story a:any-link {
+	color: black;
+}
+
+.story a:hover {
+	text-decoration: underline;
+}
+
+.story span {
+	position: relative;
+	left: 0;
+	transition: 1s ease-in-out;
+}
+
+.story:hover span {
+	left: 10px;
+}
+
+
+.scroll-arrow {
+	font-size: 75px;
+	rotate: 90deg;
+	position: absolute;
+	bottom: 0;
+	left: 40%;
+	color: white;
+	padding-bottom: 15px;
+}
+
+.scroll-arrow span {
+	position: relative;
+	left: 0;
+	transition: 1s ease-in;
+	font-size: 75px;
+	animation-name: arrow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.scroll-arrow:hover span {
+	left: 15px;
+}
+
+@keyframes arrow {
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: 6px;
+	}
+	50% {
+		left: 12px;
+	}
+
+	75% {
+		left: 6px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+
+/* End Homepage*/
+
+/*Start About Major Tom*/
+.quote-desktop {
+	display: none;
+}
+
+img {
+	display: none;
+}
+
+.spacer {
+	display: none;
+}
+
+.infopage {
+	background-image: url(/img/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	font-family: "rubik";
+	color: white;
+	position: relative;
+}
+
+.info {
+	z-index: 1;
+	position: relative;
+	padding: 30px;
+}
+
+.darken {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(8, 8, 8, 0.6);
+	z-index: 0;
+}
+
+.space {
+	font-weight: 700;
+	font-size: 3rem;
+	left: 10px;
+	top: 45px;
+	z-index: 1;
+	margin-bottom: 8rem;
+	position: relative;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.ventures {
+	font-size: 4rem;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 700;
+	color: rgba(193, 191, 191, 0.9);
+	position: absolute;
+	left: 85px;
+	top: 88px;
+	letter-spacing: -1px;
+}
+
+.heading {
+	font-weight: 500;
+	font-size: 1rem;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.first,
+.second,
+.read-more {
+	font-weight: 300;
+	font-size: 8.5px;
+	line-height: 1.8;
+}
+
+.quote {
+	font-weight: 300;
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.9);
+	font-style: italic;
+}
+.link {
+	text-decoration: none;
+}
+
+.arrow {
+	font-size: 10px;
+	text-decoration: none;
+	padding-left: 5px;
+	position: absolute;
+	text-align: center;
+}
+
+.quote blockquote::before {
+	content: " “";
+	font-size: 1rem;
+}
+.quote blockquote::after {
+	content: "„";
+	font-size: 1rem;
+}
+
+.link:any-link {
+	color: #d200a2;
+}
+
+.link:hover {
+	background-color: rgba(216, 107, 107, 0.2);
+}
+
+.container {
+	width: 100%;
+}
+
+#cookies {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(11, 4, 40, 0.9);
+	z-index: 3;
+}
+
+.cookies p {
+	color: #e60073;
+	text-shadow: 0 0 40px #1700e6, 0 0 50px #e60073, 0 0 60px #1700e6,
+		0 0 70px #e60073;
+	animation: glow 1s ease-in-out infinite alternate;
+	font-size: 10px;
+	flex-basis: 63%;
+	padding: 25px;
+}
+
+.cookies {
+	min-height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 0px 25px;
+}
+
+#cookies-btn {
+	padding: 10px 20px;
+	font-size: 0.5rem;
+	cursor: pointer;
+	background-color: rgb(12, 5, 128);
+	color: white;
+	z-index: 1;
+	border: none;
+}
+
+.arrow {
+	text-decoration: none;
+	list-style: none;
+}
+
+.link span {
+	position: relative;
+	left: 0;
+	transition: 0.5s ease-in-out;
+	font-size: 15px;
+}
+
+.link:hover span {
+	left: 3px;
+}
+
+/*End About Major Tom*/
+/* END MOBILE*/
+
+/*Desktop mode*/
+
+@media screen and (min-width: 600px) {
+	.img {
+		display: block;
+	}
+
+	.spacer {
+		display: block;
+	}
+
+	.spacer-mobil {
+		display: none;
+	}
+
+	.menu ul {
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: center;
+		text-align: center;
+		list-style: none;
+		padding: 20px;
+	}
+
+	.menu a {
+		font-size: 4rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+	}
+
+	.menu a:any-link {
+		color: black;
+	}
+
+	.menu a:hover {
+		text-decoration-line: underline;
+		text-decoration-color: #d200a2;
+		text-decoration-thickness: 7px;
+		border-radius: 5px;
+		transition: 0.5s ease-in-out;
+	}
+
+	.scroll-arrow {
+		left: 50%;
+	}
+
+	.homepage {
+		min-height: 100vh;
+		background-image: url(/img/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+		background-size: cover;
+		background-position: 50% 55%;
+	}
+	.moonbox {
+		width: 22rem;
+		height: 21rem;
+		position: absolute;
+		left: 20%;
+		top: 17%;
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+
+	.h1box {
+		font-size: 5rem;
+		top: 15%;
+	}
+
+	.story {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 15px;
+		font-size: 13px;
+		margin-right: 35px;
+	}
+
+	.infopage {
+		background-position: 0 50%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.info {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 4rem;
+	}
+
+	.story span {
+		font-size: 15px;
+	}
+
+	.text {
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+
+	.space {
+		font-size: 120px;
+		flex-basis: 54%;
+		padding-left: 10px;
+		margin: 0;
+		margin-top: -25px;
+	}
+
+	.ventures {
+		font-size: 160px;
+		margin-left: 4px;
+		margin-top: 11px;
+		letter-spacing: -1px;
+	}
+
+	.quote-desktop {
+		font-size: 3.5rem;
+		width: 30%;
+		margin-top: 65px;
+		background-image: linear-gradient(#c55383, white, #c55383);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		font-style: italic;
+		font-weight: 300;
+		opacity: 0.5;
+		display: block;
+	}
+
+	.heading {
+		font-size: 40px;
+	}
+
+	.first {
+		flex-basis: 37%;
+		margin-right: 18%;
+		margin-top: -100px;
+		padding: 0;
+	}
+
+	.quote {
+		font-size: 2rem;
+		flex-basis: 39%;
+		padding: 20px 60px;
+		margin-top: -12rem;
+		order: 3;
+	}
+
+	.quote blockquote::before {
+		content: " “";
+		font-size: 2.5rem;
+	}
+	.quote blockquote::after {
+		content: "„";
+		font-size: 2.5rem;
+	}
+
+	.second {
+		flex-basis: 37%;
+		order: 2;
+		margin-top: 50px;
+	}
+
+	.read-more {
+		order: 5;
+	}
+
+	img {
+		display: block;
+		width: 150px;
+		height: 200px;
+		position: relative;
+		top: 65px;
+		float: right;
+		shape-outside: url(/img/major_tom.jpg);
+		transform: rotate(3deg);
+	}
+
+	.arrow {
+		font-size: 20px;
+		text-decoration: none;
+		padding-left: 10px;
+		position: absolute;
+		text-align: center;
+	}
+
+	.cookies p {
+		font-size: 15px;
+		margin-left: 25px;
+	}
+
+	#cookies-btn {
+		font-size: 1rem;
+		margin-right: 25px;
+	}
+}
+/* End Desktop mode */
