@@ -1,8 +1,10 @@
+@import "normalize";
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "rubik";
+	font-family: "Rubik", "sans-serif";
 }
 /*MOBILE*/
 /*Nav Start*/
@@ -19,8 +21,8 @@ button.menu-open + .menu {
 }
 
 #menu-button {
-	width: 25px;
-	height: 25px;
+	width: 35px;
+	height: 35px;
 	background-color: transparent;
 	border: 0;
 	cursor: pointer;
@@ -36,12 +38,12 @@ button span {
 	width: 45px;
 	background-color: black;
 	display: block;
-	height: 6px;
+	height: 7px;
 	margin-bottom: 6px;
 	border-radius: 6px;
 	position: relative;
 	right: 0;
-	transition: all 0.3 ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 button:hover span:nth-child(2) {
@@ -63,7 +65,7 @@ button .moving-menu {
 }
 
 .menu ul {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -73,6 +75,10 @@ button .moving-menu {
 	text-align: center;
 	list-style: none;
 	padding-bottom: 100px;
+}
+
+.menu li {
+	font-family: "Rubik";
 }
 
 .menu a {
@@ -117,7 +123,7 @@ button .moving-menu {
 	font-weight: 700;
 }
 
-.h1box {
+.h1box h1 {
 	font-size: 2.5rem;
 	text-transform: uppercase;
 	text-align: center;
@@ -155,10 +161,9 @@ button .moving-menu {
 	left: 10px;
 }
 
-
 .scroll-arrow {
 	font-size: 75px;
-	rotate: 90deg;
+	transform: rotate(90deg);
 	position: absolute;
 	bottom: 0;
 	left: 40%;
@@ -443,7 +448,7 @@ img {
 		background-color: rgba(255, 255, 255, 0.6);
 	}
 
-	.h1box {
+	.h1box h1 {
 		font-size: 5rem;
 		top: 15%;
 	}

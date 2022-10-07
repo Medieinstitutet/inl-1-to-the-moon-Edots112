@@ -20,11 +20,11 @@
 			href="../Kund-projekt/img/moon.png" />
 		<link
 			rel="icon"
-			href="moon.png" />
+			href="/img/moon.png" />
 
 		<link
 			rel="stylesheet"
-			href="scss/normalize.css" />
+			href="scss/normalize.scss" />
 		<link
 			rel="stylesheet"
 			href="scss/main.css" />
@@ -82,7 +82,7 @@
 		<!--Home Section-->
 		<section class="homepage">
 			<div class="moonbox">
-				<div class="h1box">To the Moon</div>
+				<div class="h1box"><h1>To the Moon</h1></div>
 				<div class="story">
 					<a href="#">Read our story<span class="arrow">➜</span></a>
 				</div>
@@ -132,7 +132,7 @@
 				<div class="second text">
 					<img
 						src="/img/major_tom.jpg"
-						alt="Img Major Tom" />
+						alt="Image Major Tom" />
 					<p>
 						Am I sitting in a tin can. Far above the world. Planet Earth is
 						blue. And there's nothing I can do. Though I'm past one hundred
@@ -190,13 +190,6 @@
 			});
 		</script>
 		<script>
-			setCookie = (cName, cValue, expDays) => {
-				let date = new Date();
-				date.setTime(date.getTime() + expDays * 24 * 60 * 60 * 1000);
-				const expires = "expires=" + date.toUTCString();
-				document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
-			};
-
 			document.querySelector("#cookies-btn").addEventListener("click", () => {
 				document.querySelector("#cookies").style.display = "none";
 				setCookie("cookie", true, 30);
